@@ -14,10 +14,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://*.up.railway.app",  # Railway frontend domains
+        "https://*.vercel.app",      # Vercel domains
+        "*"  # For testing, remove in production
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
