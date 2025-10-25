@@ -2,15 +2,40 @@ import React from 'react';
 import ScoreCard from './ScoreCard';
 import KeywordAnalysis from './KeywordAnalysis';
 import FormattingTips from './FormattingTips';
-import { Download, RotateCcw } from 'lucide-react';
+import { Download, RotateCcw, FileText } from 'lucide-react';
+import { generatePDFReport, generateHTMLReport } from '../../services/exportService';
 
 const AnalysisResults = ({ data, onReset }) => {
+  const handleExportPDF = () => {
+    try {
+      generatePDFReport(data, `resume-analysis-${Date.now()}`);
+    } catch (error) {
+      console.error('PDF export failed:', error);
+      alert('Failed to generate PDF report. Please try again.');
+    }
+  };
+
+  const handleExportHTML = () => {
+    try {
+      const htmlContent = generateHTMLReport(data);
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `resume-analysis-${Date.now()}.html`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('HTML export failed:', error);
+      alert('Failed to generate HTML report. Please try again.');
+    }
+  };
+
   // Remove this unused function:
-  // const getScoreColor = (score) => {
-  //   if (score >= 80) return 'score-excellent';
-  //   if (score >= 60) return 'score-good';
-  //   if (score >= 40) return 'score-fair';
-  //   return 'score-poor';
+  // const handleExport = () => {
+  //   handleExportPDF();
   // };
 
   return (
@@ -27,10 +52,32 @@ const AnalysisResults = ({ data, onReset }) => {
             </p>
           </div>
           <div className="flex space-x-3">
-            <button className="btn-secondary flex items-center space-x-2">
-              <Download className="w-4 h-4" />
-              <span>Export Report</span>
-            </button>
+            {/* Export Dropdown */}
+            <div className="relative group">
+              <button className="btn-secondary flex items-center space-x-2">
+                <Download className="w-4 h-4" />
+                <span>Export Report</span>
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                <button
+                  onClick={handleExportPDF}
+                  className="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-2 rounded-t-lg"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Export as PDF</span>
+                </button>
+                <button
+                  onClick={handleExportHTML}
+                  className="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-2 rounded-b-lg"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Export as HTML</span>
+                </button>
+              </div>
+            </div>
+            
             <button 
               onClick={onReset}
               className="btn-primary flex items-center space-x-2"
@@ -42,7 +89,7 @@ const AnalysisResults = ({ data, onReset }) => {
         </div>
       </div>
 
-      {/* Rest of the component remains the same */}
+      {/* Rest of your existing analysis display remains the same */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1">
           <ScoreCard 
