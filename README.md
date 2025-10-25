@@ -1,3 +1,5 @@
+![Application Demo](img/gb.png)
+
 # 🚀 Smart Resume Analyzer
 
 ![React](https://img.shields.io/badge/React-18.2-%2361DAFB?logo=react)
@@ -20,7 +22,7 @@ An AI-powered web application that analyzes resumes and provides actionable feed
 
 ## 🎯 Demo
 
-g2-demo-main-screenshot
+![Application Demo](img/gnghn.png)
 
 *Live demo: [Add your deployment link here]*
 
@@ -42,20 +44,12 @@ g2-demo-main-screenshot
 
 ## 📸 Screenshots
 
-### Home Page
-g2-home-page-screenshot
-*Clean landing page with feature overview*
-
-### File Upload Interface
-g2-upload-interface-screenshot
-*Drag & drop file upload with validation*
-
 ### Analysis Results
-g2-analysis-results-screenshot
+![Application Demo](img/ffgf.png)
 *Detailed analysis with scores and suggestions*
 
 ### Keyword Analysis
-g2-keyword-analysis-screenshot
+![Application Demo](img/brtr.png)
 *Technical skills and missing keywords display*
 
 ## 🚀 Quick Start
@@ -119,15 +113,11 @@ Usage
 
         Or click to browse and select your resume
 
-g2-upload-demo-screenshot
-
     View Analysis Results
 
         Get an overall score (0-100)
 
         See detailed breakdown by category
-
-g2-results-demo-screenshot
 
     Implement Suggestions
 
@@ -139,26 +129,27 @@ g2-results-demo-screenshot
 
         Optimize for ATS systems
     
-🏗️ Project Structure
+## 🏗️ Project Structure
 
 smart-resume-analyzer/
 ├── backend/
-│   └── venv/
-│       ├── services/
-│       │   ├── resume_parser.py     # PDF/DOCX parsing
-│       │   └── ai_analyzer.py       # AI analysis logic
-│       ├── main.py                  # FastAPI application
-│       └── requirements.txt         # Python dependencies
+│ └── venv/
+│ ├── services/
+│ │ ├── resume_parser.py # PDF/DOCX parsing
+│ │ └── ai_analyzer.py # AI analysis logic
+│ ├── main.py # FastAPI application
+│ └── requirements.txt # Python dependencies
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── common/              # Header, Footer, Loading
-│   │   │   ├── upload/              # File upload components
-│   │   │   └── analysis/            # Results display components
-│   │   ├── pages/                   # Home and Analyze pages
-│   │   └── services/                # API integration
-│   ├── public/
-│   └── package.json
+│ ├── src/
+│ │ ├── components/
+│ │ │ ├── common/ # Header, Footer, Loading
+│ │ │ ├── upload/ # File upload components
+│ │ │ └── analysis/ # Results display components
+│ │ ├── pages/ # Home and Analyze pages
+│ │ └── services/ # API integration
+│ ├── public/
+│ └── package.json
+├── img/ # Screenshots directory
 └── README.md
 
 API Endpoints
@@ -187,6 +178,8 @@ Backend (Railway/Render)
     Set start command: uvicorn main:app --host 0.0.0.0 --port $PORT
 
     Add environment variables as needed
+
+![Application Demo](img/ddvfdcxs.png)
 
 🤝 Contributing
 
