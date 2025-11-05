@@ -1,6 +1,6 @@
 ![Application Demo](img/gb.png)
 
-# 🚀 Smart Resume Analyzer
+#  Smart Resume Analyzer
 
 ![React](https://img.shields.io/badge/React-18.2-%2361DAFB?logo=react)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-%23009688?logo=fastapi)
@@ -10,39 +10,39 @@
 
 An AI-powered web application that analyzes resumes and provides actionable feedback on formatting, content, keywords, and overall quality. Get instant AI-powered insights to improve your resume and increase your chances of landing interviews.
 
-## ✨ Features
+##  Features
 
-- 📄 **Multi-format Support** - Upload PDF and DOCX resumes with drag & drop interface
-- 🤖 **AI-Powered Analysis** - Get intelligent feedback using advanced NLP and parsing
-- 📊 **Detailed Scoring** - Overall score with section-wise breakdown (Grammar, Formatting, Content)
-- 🔑 **Keyword Analysis** - Identify missing and present technical skills
-- 💡 **Actionable Suggestions** - Specific, practical improvement recommendations
-- 🎨 **Modern UI** - Clean, responsive design with Tailwind CSS
-- ⚡ **Real-time Processing** - Fast analysis with progress indicators
+-  **Multi-format Support** - Upload PDF and DOCX resumes with drag & drop interface
+-  **AI-Powered Analysis** - Get intelligent feedback using advanced NLP and parsing
+-  **Detailed Scoring** - Overall score with section-wise breakdown (Grammar, Formatting, Content)
+-  **Keyword Analysis** - Identify missing and present technical skills
+-  **Actionable Suggestions** - Specific, practical improvement recommendations
+-  **Modern UI** - Clean, responsive design with Tailwind CSS
+-  **Real-time Processing** - Fast analysis with progress indicators
 
-## 🎯 Demo
+##  Demo
 
 ![Application Demo](img/gnghn.png)
 
 *Live demo: [Add your deployment link here]*
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend:**
-- ⚛️ React 18 + Vite
-- 🎨 Tailwind CSS
-- 🔄 Axios for API calls
-- 📦 Lucide React icons
-- 🚀 React Router DOM
+-  React 18 + Vite
+-  Tailwind CSS
+-  Axios for API calls
+-  Lucide React icons
+-  React Router DOM
 
 **Backend:**
-- 🐍 FastAPI (Python)
-- 📄 PyMuPDF (PDF parsing)
-- 📝 python-docx (DOCX parsing)
-- 🔤 spaCy (NLP processing)
-- 🌐 Uvicorn (ASGI server)
+-  FastAPI (Python)
+-  PyMuPDF (PDF parsing)
+-  python-docx (DOCX parsing)
+-  spaCy (NLP processing)
+-  Uvicorn (ASGI server)
 
-## 📸 Screenshots
+## Screenshots
 
 ### Analysis Results
 ![Application Demo](img/ffgf.png)
@@ -52,7 +52,7 @@ An AI-powered web application that analyzes resumes and provides actionable feed
 ![Application Demo](img/brtr.png)
 *Technical skills and missing keywords display*
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -61,12 +61,13 @@ An AI-powered web application that analyzes resumes and provides actionable feed
 
 ### Installation
 
-1. **Clone the repository**
+**Clone the repository**
    ```bash
    git clone https://github.com/PolihronisVarvaris/smart-resume-analyzer.git
    cd smart-resume-analyzer
+   ```
 
-Backend Setup
+# Backend Setup
 
 cd backend/venv
 
@@ -129,8 +130,9 @@ Usage
 
         Optimize for ATS systems
     
-## 🏗️ Project Structure
+##  Project Structure
 
+```
 smart-resume-analyzer/
 ├── backend/
 │ └── venv/
@@ -151,15 +153,16 @@ smart-resume-analyzer/
 │ └── package.json
 ├── img/ # Screenshots directory
 └── README.md
+```
 
-API Endpoints
+# API Endpoints
 Method	Endpoint	Description
 GET	/	API status check
 GET	/api/health	Health check endpoint
 POST	/api/analyze	Analyze uploaded resume file
 
-Deployment
-Frontend (Vercel/Netlify)
+# Deployment
+## Frontend (Vercel/Netlify)
 
     Connect your GitHub repository to Vercel
 
@@ -169,7 +172,7 @@ Frontend (Vercel/Netlify)
 
     Add environment variable: VITE_API_URL=your-backend-url
 
-Backend (Railway/Render)
+## Backend (Railway/Render)
 
     Connect your GitHub repository
 
@@ -181,7 +184,7 @@ Backend (Railway/Render)
 
 ![Application Demo](img/ddvfdcxs.png)
 
-🤝 Contributing
+# Contributing
 
 We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
 
@@ -195,7 +198,7 @@ We welcome contributions! Please feel free to submit issues, feature requests, o
 
     Open a Pull Request
 
-Development Roadmap
+# Development Roadmap
 
     User Authentication - Save analysis history
 
@@ -209,13 +212,12 @@ Development Roadmap
 
     Multi-language Support - Support for non-English resumes
 
-🐛 Troubleshooting
 
-📄 License
+# License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙏 Acknowledgments
+# Acknowledgments
 
     FastAPI for the excellent web framework
 
