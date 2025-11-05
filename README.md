@@ -1,6 +1,6 @@
-![Application Demo](img/gb.png)
-
 #  Smart Resume Analyzer
+
+![Application Demo](img/gb.png)
 
 ![React](https://img.shields.io/badge/React-18.2-%2361DAFB?logo=react)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-%23009688?logo=fastapi)
